@@ -1,10 +1,10 @@
 <?php
 namespace Lave\Form\Traits;
 
-use Lave\Form\Interfaces\IValidator;
+use Lave\Form\Interfaces\ValidatorInterface;
 
 /**
- * @method IValidator[] getComponents
+ * @method ValidatorInterface[] getComponents
  */
 trait TValidatorProcess {
 

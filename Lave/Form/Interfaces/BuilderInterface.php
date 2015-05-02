@@ -3,7 +3,7 @@ namespace Lave\Form\Interfaces;
 
 use Lave\Form\Builder;
 
-interface IBuilder {
+interface BuilderInterface {
 
    /**
     * @param Builder $builder

@@ -1,11 +1,11 @@
 <?php
 namespace Lave\Form;
 
-use Lave\Form\Traits\TValue;
+use Lave\Form\Traits\ValueTrait;
 
 abstract class Rule {
 
-    use TValue;
+    use ValueTrait;
 
     protected $error = '';
 

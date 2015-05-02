@@ -1,7 +1,7 @@
 <?php
 namespace Lave\Form\Traits;
 
-trait TAttrRender {
+trait AttrRenderTrait {
 
     /**
      * @return string

@@ -3,16 +3,16 @@ namespace Lave\Form\Decorator;
 
 use Lave\Form\Component;
 use Lave\Form\Decorator;
-use Lave\Form\Traits\TAttr;
-use Lave\Form\Traits\TAttrRender;
+use Lave\Form\Traits\AttrTrait;
+use Lave\Form\Traits\AttrRenderTrait;
 
 /**
- * @method TAttr|Component getComponent
+ * @method AttrTrait|Component getComponent
  */
 
 class Form extends Decorator {
 
-    use TAttrRender;
+    use AttrRenderTrait;
 
     public function render() {
         $component = $this->getComponent();

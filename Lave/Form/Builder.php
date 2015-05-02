@@ -1,13 +1,13 @@
 <?php
 namespace Lave\Form;
 
-use Lave\Form\Interfaces\IApp;
-use Lave\Form\Traits\TApp;
+use Lave\Form\Interfaces\AppInterface;
+use Lave\Form\Traits\AppTrait;
 
 class Builder implements
-    IApp
+    AppInterface
 {
-    use TApp;
+    use AppTrait;
     
     /**
      * @var Control

@@ -3,7 +3,7 @@ namespace Lave\Form\Interfaces;
 
 use Lave\Form\Validator;
 
-interface IValidator {
+interface ValidatorInterface {
 
    /**
     * @param Validator $validator

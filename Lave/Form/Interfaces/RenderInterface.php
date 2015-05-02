@@ -1,7 +1,7 @@
 <?php
 namespace Lave\Form\Interfaces;
 
-interface IRender {
+interface RenderInterface {
 
    public function render();
 

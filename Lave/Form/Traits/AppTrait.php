@@ -3,7 +3,7 @@ namespace Lave\Form\Traits;
 
 use Lave\Form\App;
 
-trait TApp {
+trait AppTrait {
 
     /** @var  App  */
     protected $app;

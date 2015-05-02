@@ -1,17 +1,17 @@
 <?php
 namespace Lave\Form;
 
-use Lave\Form\Interfaces\IBuilder;
-use Lave\Form\Interfaces\IRender;
-use Lave\Form\Interfaces\IRequest;
-use Lave\Form\Traits\TBuilder;
+use Lave\Form\Interfaces\BuilderInterface;
+use Lave\Form\Interfaces\RenderInterface;
+use Lave\Form\Interfaces\RequestInterface;
+use Lave\Form\Traits\BuilderTrait;
 
 abstract class Component implements
-    IRender,
-    IBuilder,
-    IRequest
+    RenderInterface,
+    BuilderInterface,
+    RequestInterface
 {
-    use TBuilder;
+    use BuilderTrait;
 
     /** @var \Lave\Form\Component[] */
     protected $components = array();

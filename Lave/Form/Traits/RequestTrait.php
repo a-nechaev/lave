@@ -3,7 +3,7 @@ namespace Lave\Form\Traits;
 
 use Lave\Form\Request;
 
-trait TRequest {
+trait RequestTrait {
 
     /** @var Request */
     protected $request;

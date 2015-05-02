@@ -1,10 +1,10 @@
 <?php
 namespace Lave\Form;
 
-use Lave\Form\Interfaces\IRender;
+use Lave\Form\Interfaces\RenderInterface;
 
 class Decorator
-    implements IRender
+    implements RenderInterface
 {
     /** @var \Lave\Form\Component */
     protected $component;

@@ -3,7 +3,7 @@ namespace Lave\Form\Interfaces;
 
 use Lave\Form\App;
 
-interface IApp {
+interface AppInterface {
 
    /**
     * @param App $app

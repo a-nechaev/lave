@@ -1,7 +1,7 @@
 <?php
 namespace Lave\Form\Traits;
 
-trait TValue {
+trait ValueTrait {
 
     /** @var  mixed  */
     protected $value;

@@ -1,7 +1,7 @@
 <?php
 namespace Lave\Form\Traits;
 
-trait TSingleton {
+trait SingletonTrait {
     protected static $instance;
     final public static function i() {
         return isset(static::$instance)

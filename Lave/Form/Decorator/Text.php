@@ -1,7 +1,7 @@
 <?php
 namespace Lave\Form\Decorator;
 use Lave\Form\Control\Text as TextInput;
-use Lave\Form\Traits\TAttrRender;
+use Lave\Form\Traits\AttrRenderTrait;
 
 
 /**
@@ -9,7 +9,7 @@ use Lave\Form\Traits\TAttrRender;
  */
 class Text extends \Lave\Form\Decorator {
 
-    use TAttrRender;
+    use AttrRenderTrait;
 
     public function render() {
 

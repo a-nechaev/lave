@@ -9,7 +9,7 @@ use Lave\Form\Component;
  *
  * @method Component getParent
  */
-trait TName {
+trait NameTrait {
     /** @var  string  */
     protected $name;
 

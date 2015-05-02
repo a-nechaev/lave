@@ -1,7 +1,7 @@
 <?php
 namespace Lave\Form\Decorator;
 use Lave\Form\Control\Select as SelectControl;
-use Lave\Form\Traits\TAttrRender;
+use Lave\Form\Traits\AttrRenderTrait;
 
 
 /**
@@ -10,7 +10,7 @@ use Lave\Form\Traits\TAttrRender;
  */
 class Select extends \Lave\Form\Decorator {
 
-    use TAttrRender;
+    use AttrRenderTrait;
 
     public function render() {
 

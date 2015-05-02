@@ -1,7 +1,7 @@
 <?php
 namespace Lave\Form\Traits;
 
-trait TAttr {
+trait AttrTrait {
 
     /** @var  array  */
     protected $attributes = array();

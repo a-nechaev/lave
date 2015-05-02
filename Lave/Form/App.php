@@ -1,16 +1,16 @@
 <?php
 namespace Lave\Form;
 
-use Lave\Form\Traits\TBuilder;
-use Lave\Form\Traits\TRequest;
-use Lave\Form\Traits\TSingleton;
-use Lave\Form\Traits\TValidator;
+use Lave\Form\Traits\BuilderTrait;
+use Lave\Form\Traits\RequestTrait;
+use Lave\Form\Traits\SingletonTrait;
+use Lave\Form\Traits\ValidatorTrait;
 
 class App {
 
-    use TSingleton,
-        TBuilder,
-        TValidator,
-        TRequest;
+    use SingletonTrait,
+        BuilderTrait,
+        ValidatorTrait,
+        RequestTrait;
 
 }

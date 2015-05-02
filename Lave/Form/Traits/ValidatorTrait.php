@@ -3,7 +3,7 @@ namespace Lave\Form\Traits;
 
 use Lave\Form\Validator;
 
-trait TValidator {
+trait ValidatorTrait {
 
     /** @var Validator */
     protected $validator;

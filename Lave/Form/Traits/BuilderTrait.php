@@ -3,7 +3,7 @@ namespace Lave\Form\Traits;
 
 use Lave\Form\Builder;
 
-trait TBuilder {
+trait BuilderTrait {
 
     /** @var  Builder */
     protected $builder;

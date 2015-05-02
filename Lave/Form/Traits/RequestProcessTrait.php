@@ -6,13 +6,13 @@ use Lave\Form\Request;
 
 /**
  *
- * @method TRequestProcess[] getComponents
+ * @method RequestProcessTrait[] getComponents
  * @method string getAbsoluteName
  * @method Component setValue($value)
  * @method Request getRequest
  *
  */
-trait TRequestProcess {
+trait RequestProcessTrait {
 
     public function processRequest($method) {
 

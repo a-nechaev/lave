@@ -3,7 +3,7 @@ namespace Lave\Form\Interfaces;
 
 use Lave\Form\Request;
 
-interface IRequest {
+interface RequestInterface {
 
    /**
     * @param Request $request

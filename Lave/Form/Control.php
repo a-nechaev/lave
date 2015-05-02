@@ -1,29 +1,29 @@
 <?php
 namespace Lave\Form;
 
-use Lave\Form\Interfaces\IApp;
-use Lave\Form\Interfaces\IValidator;
+use Lave\Form\Interfaces\AppInterface;
+use Lave\Form\Interfaces\ValidatorInterface;
 
-use Lave\Form\Traits\TApp;
-use Lave\Form\Traits\TAttr;
-use Lave\Form\Traits\TName;
-use Lave\Form\Traits\TRequest;
-use Lave\Form\Traits\TRequestProcess;
-use Lave\Form\Traits\TValidator;
+use Lave\Form\Traits\AppTrait;
+use Lave\Form\Traits\AttrTrait;
+use Lave\Form\Traits\NameTrait;
+use Lave\Form\Traits\RequestTrait;
+use Lave\Form\Traits\RequestProcessTrait;
+use Lave\Form\Traits\ValidatorTrait;
 use Lave\Form\Traits\TValidatorProcess;
-use Lave\Form\Traits\TValue;
+use Lave\Form\Traits\ValueTrait;
 
 class Control extends Component implements
-    IApp,
-    IValidator
+    AppInterface,
+    ValidatorInterface
 {
 
-    use TApp,
-        TValidator, TValidatorProcess,
-        TRequest, TRequestProcess,
-        TAttr,
-        TName,
-        TValue;
+    use AppTrait,
+        ValidatorTrait, TValidatorProcess,
+        RequestTrait, RequestProcessTrait,
+        AttrTrait,
+        NameTrait,
+        ValueTrait;
 
     public function validate() {
         $fail = $this->processValidator();

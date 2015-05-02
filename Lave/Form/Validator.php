@@ -4,11 +4,11 @@ namespace Lave\Form;
 use Lave\Form\Rule\Exist;
 use Lave\Form\Rule\Email;
 use Lave\Form\Rule\NoEmpty;
-use Lave\Form\Traits\TValue;
+use Lave\Form\Traits\ValueTrait;
 
 class Validator {
 
-    use TValue;
+    use ValueTrait;
 
     protected $errors = array();
 
