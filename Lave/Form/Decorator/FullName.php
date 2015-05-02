@@ -15,13 +15,30 @@ class FullName extends \Lave\Form\Decorator {
         $components_html = '';
         if ($components) {
             foreach ($components as $c) {
-                $components_html .= $c->render().'<br />';
+                $component_html = $c->render();
+                $components_html .= <<<HTML
+<div class="col-xs-4">
+    $component_html
+</div>
+HTML;
             }
         }
 
+        $label_html = '';
+        $label = $component->getLabel();
+        if ($label) {
+            $label_html = <<<HTML
+<label>$label</label>
+HTML;
+        }
+
+
         return <<<HTML
-<div>
-    $components_html
+<div class="form-group">
+    $label_html
+    <div class="row">
+        $components_html
+    </div>
 </div>
 HTML;
     }

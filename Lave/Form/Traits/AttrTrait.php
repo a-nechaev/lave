@@ -38,4 +38,33 @@ trait AttrTrait {
         $this->setAttributes($attrs);
     }
 
+    public function mergeAttributes(array $data, $attributes = null) {
+        if (is_null($attributes)) {
+            $attributes = $this->getAttributes();
+        }
+
+        foreach ($data as $key=>$val) {
+            if (!array_key_exists($key, $attributes)) {
+                $attributes[$key] = $val;
+                continue;
+            }
+
+            if (is_array($attributes[$key]) && is_array($val)) {
+                $attributes[$key] = array_merge($attributes[$key], $val);
+                continue;
+            }
+
+            if (is_array($val) && !is_array($attributes[$key])) {
+                $val[] = $attributes[$key];
+                $attributes[$key] = $val;
+                continue;
+            }
+
+            $attributes[$key] = $val;
+        }
+
+        return $attributes;
+    }
+
+
 }

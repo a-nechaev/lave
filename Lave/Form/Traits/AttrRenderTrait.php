@@ -24,19 +24,27 @@ trait AttrRenderTrait {
     private function renderAttribute($name, $value) {
         $output = $name;
         if ($value) {
-            $output .= '="'.$this->renderAttributeValue($value).'"';
+            $separator = '; ';
+            if ($name == 'class') {
+                $separator = ' ';
+            }
+            $output .= '="'.$this->renderAttributeValue($value, $separator).'"';
         }
 
         return $output;
     }
 
-    private function renderAttributeValue($value) {
+    private function renderAttributeValue($value, $separator='; ') {
         if (is_array($value)) {
             $values = array();
             foreach($value as $i=>$v) {
+                if (is_numeric($i)) {
+                    $values[] = $v;
+                    continue;
+                }
                 $values[] = $i.':'.$v;
             }
-            return implode('; ', $values);
+            return implode($separator, $values);
         }
 
         return $value;

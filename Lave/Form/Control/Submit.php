@@ -8,6 +8,9 @@ class Submit extends Control {
 
     public function init() {
         parent::init();
+
+        $this->addAttribute(array('type'=>'submit'));
+
         $this->setDecorator(new SubmitDecorator());
     }
 

@@ -2,6 +2,7 @@
 namespace Lave\Form\Decorator;
 use Lave\Form\Control\Text as TextInput;
 use Lave\Form\Traits\AttrRenderTrait;
+use Lave\Form\Traits\AttrTrait;
 
 
 /**
@@ -17,27 +18,47 @@ class Text extends \Lave\Form\Decorator {
 
         $attributes_data = $component->getAttributes();
 
+        $attributes_data = $component->mergeAttributes(array('class'=>array('form-control')), $attributes_data);
+
         $attributes_data['name'] = $component->getAbsoluteName();
         $attributes_data['value'] = $component->getValue();
 
         $attributes_data_rendered = $this->renderAttributes($attributes_data);
 
+        $label_html = '';
+        $label = $component->getLabel();
+        if ($label) {
+            $label_html = <<<HTML
+<label class="control-label">$label</label>
+HTML;
+        }
 
         $validator = $component->validator();
         $errors = $validator->getErrors();
+        $errors_class = '';
         $errors_html = '';
         if ($errors) {
+            $errors_class = 'has-error';
+            $errors_html = array();
             foreach ($errors as $error) {
-                $errors_html .= <<<HTML
-<span style="color:red;">$error</span>
+                $errors_html[] = <<<HTML
+<div class="alert alert-danger" role="alert">$error</div>
 HTML;
             }
-            $errors_html = '<br />'.$errors_html;
+            $errors_html = implode('', $errors_html);
         }
 
         return <<<HTML
-<input {$attributes_data_rendered} />
+<div class="form-group $errors_class">
+    $label_html
+    <input {$attributes_data_rendered} />
+</div>
+
+
 {$errors_html}
 HTML;
+
+        //    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+
     }
 }

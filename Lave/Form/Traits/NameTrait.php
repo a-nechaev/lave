@@ -4,9 +4,6 @@ namespace Lave\Form\Traits;
 use Lave\Form\Component;
 
 /**
- * Class TName
- * @package Lave\Form\Traits
- *
  * @method Component getParent
  */
 trait NameTrait {

@@ -22,10 +22,12 @@ class FullName extends Control {
 
         $this->first_name = $this->getBuilder()->control()->createText();
         $this->first_name->setName(static::FIRST_NAME);
+        $this->first_name->addAttribute(array('placeholder'=>'First name'));
         $this->addComponent($this->first_name);
 
         $this->last_name = $this->getBuilder()->control()->createText();
         $this->last_name->setName(static::LAST_NAME);
+        $this->last_name->addAttribute(array('placeholder'=>'Last name'));
         $this->addComponent($this->last_name );
     }
 

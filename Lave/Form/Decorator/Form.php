@@ -29,9 +29,7 @@ class Form extends Decorator {
 
         foreach ($components as $component) {
             $output .= <<<HTML
-<div style="padding:10px;">
-    {$component->render()}
-</div>
+{$component->render()}
 HTML;
             $output .= PHP_EOL;
 

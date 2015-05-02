@@ -6,6 +6,7 @@ use Lave\Form\Interfaces\ValidatorInterface;
 
 use Lave\Form\Traits\AppTrait;
 use Lave\Form\Traits\AttrTrait;
+use Lave\Form\Traits\LabelTrait;
 use Lave\Form\Traits\NameTrait;
 use Lave\Form\Traits\RequestTrait;
 use Lave\Form\Traits\RequestProcessTrait;
@@ -23,6 +24,7 @@ class Control extends Component implements
         RequestTrait, RequestProcessTrait,
         AttrTrait,
         NameTrait,
+        LabelTrait,
         ValueTrait;
 
     public function validate() {
