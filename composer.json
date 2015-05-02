@@ -1,0 +1,16 @@
+{
+  "name": "lave form framework",
+  "description": "",
+  "authors": [
+    {
+      "name": "Alexey Nechaev",
+      "email": "nechaev.lexa@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.6.*"
+  }
+}

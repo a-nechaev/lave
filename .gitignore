@@ -1,1 +1,8 @@
 .idea
+.vagrant
+.gitattributes
+Vagrantfile
+puphpet
+composer.phar
+composer.lock
+vendor
