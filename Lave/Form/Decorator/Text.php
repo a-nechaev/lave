@@ -42,7 +42,7 @@ HTML;
             $errors_html = array();
             foreach ($errors as $error) {
                 $errors_html[] = <<<HTML
-<div class="alert alert-danger" role="alert">$error</div>
+<small class="help-block">$error</small>
 HTML;
             }
             $errors_html = implode('', $errors_html);
@@ -52,10 +52,10 @@ HTML;
 <div class="form-group $errors_class">
     $label_html
     <input {$attributes_data_rendered} />
+    {$errors_html}
 </div>
 
 
-{$errors_html}
 HTML;
 
         //    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
