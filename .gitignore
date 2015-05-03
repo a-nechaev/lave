@@ -6,3 +6,4 @@ puphpet
 composer.phar
 composer.lock
 vendor
+test.php
