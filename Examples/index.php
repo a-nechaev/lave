@@ -1,6 +1,6 @@
 <?php
 
-include './config.php';
+$loader = require '../vendor/autoload.php';
 
 $app = \Lave\Form\App::i();
 
