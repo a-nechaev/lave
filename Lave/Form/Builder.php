@@ -33,7 +33,7 @@ class Builder implements
 
     public function setControl(Control $control) {
         $this->control = $control;
-        $this->control->setApp($this->getApp());
+        $this->control->setApp($this->app());
         return $this;
     }
 
@@ -51,7 +51,7 @@ class Builder implements
 
     public function setForm(Form $form) {
         $this->form = $form;
-        $this->form->setApp($this->getApp());
+        $this->form->setApp($this->app());
         return $this;
     }
 

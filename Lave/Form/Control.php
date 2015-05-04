@@ -2,25 +2,31 @@
 namespace Lave\Form;
 
 use Lave\Form\Interfaces\AppInterface;
+use Lave\Form\Interfaces\BuilderInterface;
+use Lave\Form\Interfaces\RequestInterface;
 use Lave\Form\Interfaces\ValidatorInterface;
 
 use Lave\Form\Traits\AppTrait;
 use Lave\Form\Traits\AttrTrait;
+use Lave\Form\Traits\BuilderTrait;
 use Lave\Form\Traits\LabelTrait;
 use Lave\Form\Traits\NameTrait;
 use Lave\Form\Traits\RequestTrait;
 use Lave\Form\Traits\RequestProcessTrait;
 use Lave\Form\Traits\ValidatorTrait;
-use Lave\Form\Traits\TValidatorProcess;
+use Lave\Form\Traits\ValidatorProcessTrait;
 use Lave\Form\Traits\ValueTrait;
 
 class Control extends Component implements
     AppInterface,
-    ValidatorInterface
+    ValidatorInterface,
+    BuilderInterface,
+    RequestInterface
 {
 
     use AppTrait,
-        ValidatorTrait, TValidatorProcess,
+        BuilderTrait,
+        ValidatorTrait, ValidatorProcessTrait,
         RequestTrait, RequestProcessTrait,
         AttrTrait,
         NameTrait,
@@ -28,21 +34,21 @@ class Control extends Component implements
         ValueTrait;
 
     public function validate() {
-        $fail = $this->processValidator();
+        $success = $this->processValidator();
 
         $validator = $this->validator();
         $validator->setValue($this->getValue());
         if (!$validator->validate()) {
-            $fail = true;
+            $success = false;
         }
 
-        return !$fail;
+        return $success;
     }
 
     public function create(Control $control) {
-        $app = $this->getApp();
-        $control->setBuilder($app->getBuilder());
-        $control->setRequest($app->getRequest());
+        $app = $this->app();
+        $control->setBuilder($app->builder());
+        $control->setRequest($app->request());
         $control->setValidator(clone $app->validator());
         $control->init();
         return $control;

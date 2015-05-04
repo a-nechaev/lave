@@ -14,7 +14,7 @@ interface RequestInterface {
    /**
     * @return Request
     */
-   public function getRequest();
+   public function request();
 
 
 }

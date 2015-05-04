@@ -14,7 +14,7 @@ interface AppInterface {
    /**
     * @return App
     */
-   public function getApp();
+   public function app();
 
 
 }

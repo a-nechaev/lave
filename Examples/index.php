@@ -6,9 +6,9 @@ $app = \Lave\Form\App::i();
 
 include 'Registration.php';
 /** @var Registration $form_registration */
-$form_registration = $app->getBuilder()->form()->create(new Registration());
+$form_registration = $app->builder()->form()->create(new Registration());
 $form_registration->setName('form_registration');
-if ($form_registration->processRequest($app->getRequest()->typePost())
+if ($form_registration->processRequest($app->request()->typePost())
     && $form_registration->validate()
 ) {
 

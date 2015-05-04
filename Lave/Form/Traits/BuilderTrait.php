@@ -20,12 +20,12 @@ trait BuilderTrait {
     /**
      * @return Builder
      */
-    public function getBuilder() {
+    public function builder() {
         if (!is_null($this->builder)) {
             return $this->builder;
         }
 
         $this->setBuilder(new Builder());
-        return $this->getBuilder();
+        return $this->builder();
     }
 }

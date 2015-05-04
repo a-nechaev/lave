@@ -6,7 +6,7 @@ use Lave\Form\Interfaces\ValidatorInterface;
 /**
  * @method ValidatorInterface[] getComponents
  */
-trait TValidatorProcess {
+trait ValidatorProcessTrait {
 
     /**
      * @return bool

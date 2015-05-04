@@ -32,11 +32,9 @@ class Form extends Decorator {
 {$component->render()}
 HTML;
             $output .= PHP_EOL;
-
         }
 
         $output .= '</form>'.PHP_EOL;
-
         return $output;
     }
 }

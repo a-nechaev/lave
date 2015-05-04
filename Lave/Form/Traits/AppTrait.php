@@ -11,13 +11,13 @@ trait AppTrait {
     /**
      * @return App
      */
-    public function getApp() {
+    public function app() {
         if (!is_null($this->app)) {
             return $this->app;
         }
 
         $this->setApp(App::i());
-        return $this->getApp();
+        return $this->app();
     }
 
     /**

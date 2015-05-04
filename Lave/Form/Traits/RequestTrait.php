@@ -20,13 +20,13 @@ trait RequestTrait {
     /**
      * @return Request
      */
-    public function getRequest() {
+    public function request() {
         if (!is_null($this->request)) {
             return $this->request;
         }
 
         $this->setRequest(new Request());
-        return $this->getRequest();
+        return $this->request();
     }
 
 }

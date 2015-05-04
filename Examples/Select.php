@@ -9,19 +9,19 @@ class Select extends \Lave\Form\Form {
 
         $countries = array('Select country', 'Russia', 'Other');
 
-        $control = $this->getBuilder()->control()->createSelect();
+        $control = $this->builder()->control()->createSelect();
         $control->setName('country');
         $control->setData($countries);
         $control->validator()->addRule($control->validator()->ruleNoEmpty());
         $this->addComponent($control);
 
-        $control = $this->getBuilder()->control()->createMultiSelect();
+        $control = $this->builder()->control()->createMultiSelect();
         $control->setName('country_multi');
         $control->setData($countries);
         $control->validator()->addRule($control->validator()->ruleNoEmpty());
         $this->addComponent($control);
 
-        $control = $this->getBuilder()->control()->createSubmit();
+        $control = $this->builder()->control()->createSubmit();
         $control->setName('submit');
         $control->setValue('submit');
         $this->addComponent($control);

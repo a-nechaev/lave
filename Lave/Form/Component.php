@@ -7,12 +7,8 @@ use Lave\Form\Interfaces\RequestInterface;
 use Lave\Form\Traits\BuilderTrait;
 
 abstract class Component implements
-    RenderInterface,
-    BuilderInterface,
-    RequestInterface
+    RenderInterface
 {
-    use BuilderTrait;
-
     /** @var \Lave\Form\Component[] */
     protected $components = array();
 

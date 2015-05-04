@@ -14,7 +14,7 @@ interface BuilderInterface {
    /**
     * @return Builder
     */
-   public function getBuilder();
+   public function builder();
 
 
 }
