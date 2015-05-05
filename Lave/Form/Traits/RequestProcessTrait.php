@@ -9,7 +9,7 @@ use Lave\Form\Request;
  * @method RequestProcessTrait[] getComponents
  * @method string getAbsoluteName
  * @method Component setValue($value)
- * @method Request getRequest
+ * @method Request request
  *
  */
 trait RequestProcessTrait {
@@ -31,7 +31,7 @@ trait RequestProcessTrait {
             return true;
         }
 
-        $request = $this->getRequest();
+        $request = $this->request();
         if (!is_null($value = $request->get($name, $method))) {
             $this->setValue($value);
             $change = true;
