@@ -1,3 +1,1 @@
-Lave framework
-
-test travis
+Lave framework  [![Build Status](https://travis-ci.org/a-nechaev/lave.svg?branch=develop)](https://travis-ci.org/a-nechaev/lave)
