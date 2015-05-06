@@ -1,8 +1,7 @@
 <?php
-namespace Lave\Form\Test\Rule;
+namespace Lave\Form\Rule;
 
-use Lave\Form\Rule\Email;
-use Lave\Form\Test\Base;
+use Lave\Form\Base;
 
 class EmailTest extends Base {
 

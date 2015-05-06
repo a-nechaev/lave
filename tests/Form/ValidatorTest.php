@@ -1,7 +1,5 @@
 <?php
-namespace Lave\Form\Test;
-
-use Lave\Form\Validator;
+namespace Lave\Form;
 
 class ValidatorTest extends Base {
 

@@ -1,9 +1,8 @@
 <?php
+
 namespace Lave\Form\Decorator;
 use Lave\Form\Control\Text as TextInput;
 use Lave\Form\Traits\AttrRenderTrait;
-use Lave\Form\Traits\AttrTrait;
-
 
 /**
  * @method TextInput getComponent

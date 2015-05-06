@@ -1,7 +1,6 @@
 <?php
 namespace Lave\Form;
 
-use Lave\Form\Component;
 use Lave\Form\Interfaces\RenderInterface;
 
 class Decorator implements

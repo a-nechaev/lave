@@ -1,11 +1,11 @@
 <?php
-namespace Lave\Form\Test;
+
+namespace Lave\Form;
 
 use Lave\Form\Traits\AttrTrait;
 
 class AttrDummyTrait {
     use AttrTrait;
-
 }
 
 class AttrTraitTest extends Base {

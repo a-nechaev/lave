@@ -1,6 +1,7 @@
 {
-  "name": "lave form framework",
-  "description": "",
+  "name": "lave framework",
+  "description": "Lightweight form framework",
+  "type": "library",
   "authors": [
     {
       "name": "Alexey Nechaev",
@@ -15,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Lave\\":"Lave"
+      "Lave\\": "src"
     }
   }
 }

@@ -1,16 +1,15 @@
 <?php
-namespace Lave\Form\Test\Rule;
+namespace Lave\Form\Rule;
 
-use Lave\Form\Rule\Exist;
-use Lave\Form\Test\Base;
+use Lave\Form\Base;
 
-class ExistTest extends Base {
+class NoEmptyTest extends Base {
 
-    /** @var  Exist */
+    /** @var  \Lave\Form\Rule\NoEmpty */
     protected $rule;
 
     protected function setUp() {
-        $this->rule = new Exist(array(1,2,3));
+        $this->rule = new \Lave\Form\Rule\NoEmpty();
     }
     /**
      * @dataProvider validateProvider
@@ -22,15 +21,15 @@ class ExistTest extends Base {
 
     public function validateProvider() {
         return array(
-            array(1, true),
-            array(array(1,2), true),
-            array(4, false),
-            array('', true),
-            array('test', false),
+            array(null, false),
+            array(false, true),
+            array(0.1, true),
+            array('', false),
+            array('test', true),
             array(array(''), false),
             array(array('1'), true),
             array(array('1', '2'), true),
-            array(array('', '2'), false),
+            array(array('', '2'), true),
         );
     }
 }

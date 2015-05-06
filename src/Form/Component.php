@@ -1,10 +1,7 @@
 <?php
 namespace Lave\Form;
 
-use Lave\Form\Interfaces\BuilderInterface;
 use Lave\Form\Interfaces\RenderInterface;
-use Lave\Form\Interfaces\RequestInterface;
-use Lave\Form\Traits\BuilderTrait;
 
 abstract class Component implements
     RenderInterface
